@@ -7,6 +7,7 @@
 set -e
 
 # Colors for output
+
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
@@ -14,6 +15,7 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 # Logging function
+
 log() {
     echo -e "${GREEN}[INFO]${NC} $1"
 }
@@ -28,18 +30,20 @@ error() {
 }
 
 # Check if running as root
+
 if [[ $EUID -eq 0 ]]; then
    error "Don't run this script as root!"
 fi
 
 # Check if we're on Arch Linux
+
 if ! command -v pacman &> /dev/null; then
     error "This script is designed for Arch Linux (pacman not found)"
 fi
 
 log "Starting Hyprland setup..."
 
-# === BACKUP EXISTING CONFIGS ===
+# BACKUP EXISTING CONFIGS 
 log "Backing up existing configurations..."
 BACKUP_DIR="$HOME/.config/hyprland-setup-backup-$(date +%s)"
 mkdir -p "$BACKUP_DIR"
@@ -51,11 +55,11 @@ for config_dir in hypr kitty waybar wofi; do
     fi
 done
 
-# === SYSTEM UPDATE ===
+# SYSTEM UPDATE 
 log "Updating system packages..."
 sudo pacman -Syu --noconfirm || error "System update failed"
 
-# === INSTALL ESSENTIAL PACKAGES ===
+# INSTALL ESSENTIAL PACKAGES
 log "Installing essential packages..."
 PACKAGES=(
     # Core Hyprland components
@@ -74,7 +78,7 @@ PACKAGES=(
 
 sudo pacman -S --noconfirm "${PACKAGES[@]}" || error "Package installation failed"
 
-# === ENABLE NETWORK MANAGER ===
+# ENABLE NETWORK MANAGER
 log "Enabling NetworkManager..."
 if ! systemctl is-enabled NetworkManager &> /dev/null; then
     sudo systemctl enable --now NetworkManager
@@ -83,11 +87,11 @@ else
     log "NetworkManager already enabled"
 fi
 
-# === CREATE CONFIG DIRECTORIES ===
+# CREATE CONFIG DIRECTORIES
 log "Creating configuration directories..."
 mkdir -p ~/.config/{hypr,kitty,waybar,wofi,dunst} ~/Pictures/wallpapers
 
-# === DOWNLOAD DEFAULT WALLPAPER ===
+# DOWNLOAD DEFAULT WALLPAPER 
 log "Setting up wallpaper..."
 WALLPAPER_PATH="$HOME/Pictures/wallpapers/default.jpg"
 if [[ ! -f "$WALLPAPER_PATH" ]]; then
