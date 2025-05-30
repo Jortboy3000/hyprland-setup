@@ -160,11 +160,6 @@ decoration {
         new_optimizations = true
     }
     
-    drop_shadow = true
-    shadow_range = 10
-    shadow_render_power = 3
-    col.shadow = rgba(000000aa)
-}
 
 # === ANIMATIONS ===
 animations {
@@ -188,9 +183,6 @@ dwindle {
     preserve_split = true
 }
 
-master {
-    new_is_master = true
-}
 
 # === MISC ===
 misc {
@@ -200,10 +192,10 @@ misc {
 }
 
 # === WINDOW RULES ===
-windowrule = float, ^(pavucontrol)$
-windowrule = float, ^(blueman-manager)$
-windowrule = float, ^(nm-connection-editor)$
-windowrule = float, ^(file-roller)$
+windowrulev2 = float,class:^(pavucontrol)$
+windowrulev2 = float,class:^(blueman-manager)$
+windowrulev2 = float,class:^(nm-connection-editor)$
+windowrulev2 = float,class:^(file-roller)$
 windowrulev2 = float,class:^(kitty)$,title:^(float_kitty)$
 
 # === KEYBINDINGS ===
@@ -344,6 +336,14 @@ tab_bar_edge bottom
 tab_bar_style powerline
 tab_powerline_style slanted
 tab_title_template {title}{' :{}:'.format(num_windows) if num_windows > 1 else ''}
+
+# Mouse-based copy/paste
+mouse_map left press ungrabbed select_to_copy
+mouse_map right press ungrabbed paste_from_clipboard
+
+# Also enable keyboard shortcuts for consistency
+map ctrl+shift+c copy_to_clipboard
+map ctrl+shift+v paste_from_clipboard
 
 # Key mappings
 map ctrl+shift+c copy_to_clipboard
