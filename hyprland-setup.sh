@@ -1,4 +1,4 @@
-#!/bin/bash\
+#!/bin/bash
 
 # Hyprland Setup Script for Arch Linux\
 # Last updated: 30/05/2025 - 23:14 AWST\
