@@ -65,9 +65,9 @@ PACKAGES=(
     # System utilities
     networkmanager brightnessctl playerctl
     # Fonts
-    ttf-ibm-plex ttf-courier-prime ttf-font-awesome
+    ttf-ibm-plex ttf-font-awesome
     # Additional utilities
-    neofetch grim slurp dunst libnotify pavucontrol
+    grim slurp dunst libnotify pavucontrol
     # File manager
     thunar
 )
