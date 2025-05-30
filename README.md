@@ -3,7 +3,7 @@
 **Transform your boring Arch Linux into a floating terminal paradise**
 
 This script takes your fresh Arch install and give you a good foundation to build upon!
-## ✨ What You Get
+##  What You Get
 
 - **Hyprland** - The wayland compositor that doesn't suck
 - **Kitty** - Terminal so fast it makes other terminals cry
@@ -12,7 +12,7 @@ This script takes your fresh Arch install and give you a good foundation to buil
 - **Swww** - Wallpaper engine for the sophisticated
 - **Perfect keybinds** - Actually usable, not some vim wizard nonsense
 
-## 🎯 Features
+## Features
 
 ### Visual Candy
 - Smooth 60fps animations
@@ -34,7 +34,7 @@ This script takes your fresh Arch install and give you a good foundation to buil
 - Colored output (because plain text is for peasants)
 - Helpful keybind cheatsheet
 
-## 🚦 Installation
+## Installation
 
 **One command. That's it.**
 
@@ -44,7 +44,7 @@ curl -L -o hyprland-setup.sh "https://raw.githubusercontent.com/Jortboy3000/hypr
 
 Then reboot and watch the magic happen.
 
-## ⌨️ Essential Keybinds
+## Essential Keybinds
 
 | Keys | Action | 
 |------|--------|
@@ -57,7 +57,7 @@ Then reboot and watch the magic happen.
 | `Super + Print` | Screenshot area |
 | `Print` | Screenshot everything |
 
-## 🎨 Customization
+## Customization
 
 Want to make it yours? 
 
@@ -66,14 +66,14 @@ Want to make it yours?
 - **Bar**: Tweak `~/.config/waybar/style.css`
 - **Terminal**: Mess with `~/.config/kitty/kitty.conf`
 
-## 🔧 Requirements
+## Requirements
 
 - Arch Linux (obviously)
 - Internet connection
 - About 5 minutes
 - Willingness to flex on Ubuntu users
 
-## 🆘 Troubleshooting
+## Troubleshooting
 
 **Script won't run?**
 ```bash
@@ -87,17 +87,17 @@ chmod +x hyprland-setup.sh
 **Want your old setup back?**
 - Your configs are backed up in `~/.config/hyprland-setup-backup-*`
 
-## 🤝 Contributing
+## Contributing
 
 Found a bug? Want to add something cool? PRs welcome. Just don't make it worse.
 
-## 📸 Screenshots
+## Screenshots
 
 *Coming soon - once you run this and take some fire screenshots*
 
-## ⚡ Credits
+## Credits
 
-Built for people who want their desktop to look incredible without spending 3 weeks reading Arch Wiki pages.
+Beginner friendly baseline so you can build on it
 
 **Now stop reading and go install it.**
 
