@@ -2,8 +2,7 @@
 
 **Transform your boring Arch Linux into a floating terminal paradise**
 
-This script takes your fresh Arch install and turns it into a sick Hyprland rice that'll make your friends jealous. We're talking smooth animations, transparent terminals, and a setup so clean it belongs in r/unixporn.
-
+This script takes your fresh Arch install and give you a good foundation to build upon!
 ## ✨ What You Get
 
 - **Hyprland** - The wayland compositor that doesn't suck
