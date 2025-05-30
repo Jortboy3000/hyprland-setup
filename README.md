@@ -1,4 +1,4 @@
-# Ultimate Hyprland Rice Setup
+# Beginner Friendly Hyprland Basic Setup
 
 **Transform your boring Arch Linux into a floating terminal paradise**
 
